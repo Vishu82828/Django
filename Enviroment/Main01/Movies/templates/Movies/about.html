@@ -9,6 +9,9 @@
 <body>
     {% block content %}
     <h1>I Like Action Movies</h1>
+    {% load static %}
+    <img style="width:200px" src="{% static 'Movies/img1.jpg' %}" alt="About Image">
+    <img style="width:200px" src="{% static 'Movies/img2.jpeg' %}" alt="About Image">
     {% endblock %}
 </body>
 </html>
