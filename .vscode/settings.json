@@ -1,5 +1,6 @@
 {
     "python.analysis.extraPaths": [
-        "./EvnSetup/MainProject"
+        "./Enviroment/Main",
+        "./Enviroment/Main01"
     ]
 }
