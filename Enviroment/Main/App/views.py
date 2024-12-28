@@ -12,3 +12,6 @@ def hello(request, first_name):
 
 def add(request, num1, num2):
     return HttpResponse(f'Total = {num1+num2}')
+
+def name(req):
+    return HttpResponse("hello pyush")

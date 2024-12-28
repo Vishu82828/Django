@@ -1,5 +1,5 @@
 """
-URL configuration for Main project.
+URL configuration for Practice project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -15,15 +15,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-
-from App.views import index, about, hello, add, name
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index ),
-    path('about/', about ),
-    path('hello/<str:first_name>/', hello, name='hello'),
-    path('add/<int:num1>/<int:num2>/',add),
-    path('name/', name )
+    path('', include('subPractice.urls')),
 ]
