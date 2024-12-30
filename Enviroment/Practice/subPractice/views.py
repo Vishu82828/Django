@@ -9,4 +9,13 @@ def index(request):
     return render(request, 'subPractice/index.html', context)
 
 def about(request):
-    return render(request, "subPractice/about.html",{})
+    return render(request, 'subPractice/about.html', {})
+
+def service(req):
+    return render(req, 'subPractice/service.html', {})
+
+def signin(req):
+    return render(req, 'subPractice/signin.html', {})
+
+def signup(req):
+    return render(req, 'subPractice/signup.html', {})

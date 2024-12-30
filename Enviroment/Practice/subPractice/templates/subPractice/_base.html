@@ -1,0 +1,26 @@
+{% block header %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../static/subPractice/style.css">
+</head>
+<body>
+    <nav>
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url "service" %}">Service</a>
+        <a href="{% url "signin" %}">SignIn</a>
+        <a href="{% url "signup" %}">SignUp</a>
+    </nav>
+{% endblock %}
+
+    {% block contain %}{% endblock  %}
+
+{% block footer %}
+<h3>Footer hai hum</h3>
+</body>
+</html>
+{% endblock  %}
