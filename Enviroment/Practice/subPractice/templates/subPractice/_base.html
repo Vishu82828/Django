@@ -1,26 +1,41 @@
-{% block header %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../static/subPractice/style.css">
+    <link rel="stylesheet" href="{% static 'subPractice/style.css' %}">
 </head>
 <body>
     <nav>
         <a href="{% url 'index' %}">Home</a>
         <a href="{% url 'about' %}">About</a>
-        <a href="{% url "service" %}">Service</a>
-        <a href="{% url "signin" %}">SignIn</a>
-        <a href="{% url "signup" %}">SignUp</a>
+        <a href="{% url 'service' %}">Services</a>
+        <a href="{% url 'signin' %}">SignIn</a>
+        <a href="{% url 'signup' %}">SignUp</a>
     </nav>
-{% endblock %}
-
-    {% block contain %}{% endblock  %}
-
-{% block footer %}
-<h3>Footer hai hum</h3>
+    {% block contain %}{% endblock %}
+    {% block footer %}
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'service' %}">Services</a>
+                <a href="{% url 'signin' %}">SignIn</a>
+                <a href="{% url 'signup' %}">SignUp</a>
+            </div>
+            <div class="footer-contact">
+                <p>Contact me at:</p>
+                <p>Email: vishwajeetsingh8422@gmail.com</p>
+                <p>Phone: +918292927501</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 VISHWAJEET SINGH. All rights reserved.</p>
+        </div>
+    </footer>
+    {% endblock %}
 </body>
 </html>
-{% endblock  %}

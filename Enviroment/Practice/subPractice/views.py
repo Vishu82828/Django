@@ -1,12 +1,8 @@
 from django.shortcuts import render
-
+from .forms import SignUp
 # Create your views here.
 def index(request):
-    friNames = ["Alice", "Bob", "Charlie", "David", "Eva", "Frank", "Grace", "Hannah", "Ivan", "Julia"]
-    context = {
-        'names' : friNames
-    }
-    return render(request, 'subPractice/index.html', context)
+    return render(request, 'subPractice/index.html', {})
 
 def about(request):
     return render(request, 'subPractice/about.html', {})
@@ -18,4 +14,15 @@ def signin(req):
     return render(req, 'subPractice/signin.html', {})
 
 def signup(req):
-    return render(req, 'subPractice/signup.html', {})
+    if req.method == 'POST':
+        # form has data
+        formData = SignUp()
+        if formData.is_valid():
+            # save the data
+            formData.save()
+    else:
+        formData = SignUp()
+    context = {
+        "formData" : formData
+    }
+    return render(req, 'subPractice/signup.html', context)

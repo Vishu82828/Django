@@ -1,15 +1,17 @@
 {% extends "subPractice/_base.html" %}
 {% block contain %}
 <div class="signin-container">
-<h1>Sign In page</h1>
-<form action="">
-    First Name <input type="text">
-    Last Name <input type="text"><br>
-    Email <input type="text">
-    Password <input type="text">
-</form>
+    <h1 class="signin-title">Sign In Page</h1><br>
+    <form class="signin-form" action="" method="post">
+        {% csrf_token %}
+        <label for="email" class="signin-label">Email</label>
+        <input type="text" id="email" class="signin-input"><br><br>
+        <label for="password" class="signin-label">Password</label>
+        <input type="password" id="password" class="signin-input"><br><br>
+        <button class="signin-button">Sign In</button>
+    </form><br>
 </div>
-{% endblock  %}
-{% block footer %}
-<h1>Sign In ka footer hai </h1>
-{% endblock  %}
+{% endblock %}
+{% comment %} {% block footer %}
+<h1>Sign In ka footer hai</h1>
+{% endblock %} {% endcomment %}

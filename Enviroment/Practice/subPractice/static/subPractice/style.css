@@ -2,10 +2,10 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
 }
 nav{
-    background-color: blueviolet;
+    background-color: rgb(0, 0, 0);
     height: 5rem;
     display: flex;
     align-items: center;
@@ -14,4 +14,282 @@ nav{
 nav a{
     text-decoration: none;
     color:aliceblue;
+}
+body {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* Container for the service cards */
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* Individual service card styling */
+.service-div {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 20px;
+    width: calc(50% - 20px); /* Two cards per row with space around */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Service heading title */
+.service-heading-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+/* Service card title */
+.service-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Service card description */
+.service-description {
+    font-size: 1em;
+    color: #6c757d;
+}
+
+.signin-container, .signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 400px;
+    margin: 2rem auto;
+}
+
+.signin-title, .signup-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.signin-form, .signup-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.signin-label, .signup-label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.signin-input, .signup-input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.signin-button, .signup-button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 3px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.signin-button:hover, .signup-button:hover {
+    background-color: rgb(94, 94, 94);
+}
+
+/* About Page Styles */
+/* Portfolio Page Styles */
+.portfolio-container {
+    background-color: #fff;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    color: #333;
+}
+
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.portfolio-title {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-links a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.portfolio-links a:hover {
+    text-decoration: underline;
+}
+
+.portfolio-links p {
+    margin: 0.5rem 0;
+}
+
+.portfolio-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.portfolio-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.project {
+    margin-bottom: 1rem;
+}
+
+.project h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.project p {
+    font-size: 1rem;
+}
+
+a {
+    color: #333;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #555;
+}
+
+/* Home Page Styles */
+.home-container {
+    background-color: #fff;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    color: #333;
+}
+
+.home-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.home-title {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.home-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.home-section {
+    margin-bottom: 2rem;
+}
+
+.skills, .projects, .services {
+    margin-bottom: 1rem;
+}
+
+.service, .project {
+    margin-bottom: 1rem;
+}
+
+.service h3, .project h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.service p, .project p {
+    font-size: 1rem;
+}
+
+a {
+    color: #333;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #555;
+}
+/* --------------------------- */
+/* Footer Styles */
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact {
+    text-align: right;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
 }

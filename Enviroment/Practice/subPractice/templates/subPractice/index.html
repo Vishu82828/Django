@@ -1,9 +1,84 @@
 {% extends "subPractice/_base.html" %}
-  {% block contain %}
-    <h1>Hello Index</h1>
-    {% for i in names %}
-      <ul>
-        <li>{{ i }}</li>
-      </ul>
-    {% endfor %}
-  {% endblock %}
+{% block contain %}
+<div class="home-container">
+    <header class="home-header">
+        <h1 class="home-title">Welcome to My Portfolio</h1>
+        <p class="home-subtitle">I'm VISHWAJEET SINGH, a Full Stack Developer passionate about creating beautiful and functional web applications.</p>
+    </header>
+    
+    <section class="home-section">
+        <h2 class="section-title">About Me</h2>
+        <p>Passionate and detail-oriented Full Stack Developer with a strong foundation in HTML, CSS, and JavaScript. Experienced in developing interactive dashboards and cloning complex websites. Eager to contribute to innovative projects, continuously learn new technologies, and collaborate with dynamic teams to enhance user experience and drive business success.</p>
+    </section>
+    
+    <section class="home-section">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills">
+            <p><strong>Programming Languages:</strong> Python, JavaScript, C++, CSS, HTML</p>
+            <p><strong>Libraries/Frameworks:</strong> Tailwind CSS, Bootstrap, jQuery, React</p>
+            <p><strong>Tools/Platforms:</strong> Git, GitHub, Visual Studio Code, Jira Software, Chrome DevTool, Figma</p>
+            <p><strong>Database:</strong> MySQL</p>
+        </div>
+    </section>
+    
+    <section class="home-section">
+        <h2 class="section-title">Services</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Web Development Services</h3>
+                <p>Offer website design, responsive web applications, and web maintenance. Specialize in frameworks like React, Angular, or Bootstrap.</p>
+            </div>
+            <div class="service">
+                <h3>Resume Writing and Review</h3>
+                <p>Provide professional resume writing and review services. Help job seekers create strong and impressive resumes.</p>
+            </div>
+            <div class="service">
+                <h3>Technical Support and IT Services</h3>
+                <p>Provide technical support or IT services. Help businesses with troubleshooting, setting up networks, or cybersecurity consulting.</p>
+            </div>
+            <div class="service">
+                <h3>Educational Content Creation</h3>
+                <p>Create and sell educational content or online courses in your area of expertise. Include programming tutorials, financial literacy courses, or web development bootcamps.</p>
+            </div>
+            <div class="service">
+                <h3>Freelance Writing or Editing</h3>
+                <p>Offer content writing, editing, or proofreading services. Provide services for blog posts, technical manuals, and other content.</p>
+            </div>
+            <div class="service">
+                <h3>Virtual Assistance</h3>
+                <p>Provide administrative support and virtual assistance services. Help with tasks like email management, scheduling, and data entry.</p>
+            </div>
+            <div class="service">
+                <h3>Online Tutoring</h3>
+                <p>Offer online tutoring services in subjects you're proficient in. Provide personalized lessons and academic support to students.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="home-section">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>User Interface for Administrators and Managers</h3>
+                <a href="your-github-link" target="_blank">GitHub</a>
+                <p>Developed an interactive dashboard using CSS, JavaScript, HTML, and SQL Server. It tracks web visitors’ behavior and demographics, analyzes user engagement and retention, monitors sales figures, and provides system alerts for performance issues. The dashboard integrates real-time data from various APIs and features complex visualizations for a seamless user experience.</p>
+            </div>
+            <div class="project">
+                <h3>Multi-Page Project</h3>
+                <a href="your-project-link" target="_blank">Link</a> | <a href="your-github-link" target="_blank">GitHub</a>
+                <p>Cloned the popular Indian online fashion and lifestyle brand, Bewakoof.com, using HTML and CSS ADVANCED. I meticulously recreated the website’s functionality and design, capturing its essence.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="home-section">
+        <h2 class="section-title">Get In Touch</h2>
+        <p>Email: vishwajeetsingh8422@gmail.com</p>
+        <p>Phone: +918292927501</p>
+        <p>Location: Bihar | Currently in Inderpuri, BHEL, Bhopal.</p>
+    </section>
+</div>
+{% endblock %}
+{% comment %} {% block footer %}
+<h1>Home Page Footer</h1>
+{% endblock %} {% endcomment %}
