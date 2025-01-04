@@ -1,14 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>JoB Posting</h1>
-    {% for i in job_post %}
-       <li>Tittle : {{ i.tittle }} | Description : {{ i.description }} | Company : {{ i.company }} | Salary : {{ i.salary }}</li>
-    {% endfor %}
-</body>
-</html>
+{% extends "job_board/_base.html" %}
+{% block body %}
+    <h1 style="text-align: center; color: #333; margin-bottom: 20px;">Job Postings</h1>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+        {% for i in job_post %}
+            <div style="background: #fff; margin: 10px; padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); width: 300px; text-align: left; transition: transform 0.2s; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <strong style="color: #007BFF; font-size: 1.2em;">Title</strong>: {{ i.tittle }}<br>
+                    <strong style="color: #007BFF;">Description</strong>: {{ i.description }}<br>
+                    <strong style="color: #007BFF;">Company</strong>: {{ i.company }}<br>
+                    <strong style="color: #007BFF;">Salary</strong>: ${{ i.salary }}<br>
+                    <strong style="color: #007BFF;">Is Active</strong>: {{ i.is_active }}
+                </div>
+                <a href="{% url 'jobDetail' i.id %}" style="display: block; margin: 10px auto 0; padding: 10px 15px; background-color: #007BFF; color: white; border-radius: 5px; text-align: center; text-decoration: none;">Read more</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

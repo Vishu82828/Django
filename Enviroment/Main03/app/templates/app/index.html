@@ -1,0 +1,14 @@
+{% extends "app/base.html" %}
+{% block body %}
+    <h1 style="text-align: center; color: #333; margin-bottom: 20px;">My Shortened Links</h1>
+    <div style="width: 80%; margin: 0 auto; background: white; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+        {% for i in Links %}
+            <div style="padding: 15px; border-bottom: 1px solid #eee;">
+                <strong style="color: #007BFF;">Name:</strong> {{ i.name }}<br>
+                <strong style="color: #007BFF;">URL:</strong> <a href="{{ i.url }}" style="color: #007BFF; text-decoration: none;">{{ i.url }}</a><br>
+                <strong style="color: #007BFF;">Slug:</strong> {{ i.slug }}
+            </div>
+            <hr style="border: none; border-top: 1px solid #eee; margin: 10px 0;">
+        {% endfor %}
+    </div>
+{% endblock %}
